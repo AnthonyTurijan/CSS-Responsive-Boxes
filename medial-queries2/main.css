@@ -1,3 +1,58 @@
 body {
   background: papayawhip;
+
+}
+body {
+  height:100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-wrap:wrap;
+}
+
+.a, .b, .c, .d, .e, .f {
+  background-color: lightsalmon;
+}
+
+.a, .b, .f {
+  width: 100%;
+}
+
+.a, .c, .d, .e, .f {
+  height: 20vh;
+}
+
+.b {
+  height: 40vh;
+}
+
+.c, .d, .e {
+  flex-grow: 1;
+}
+
+@media (min-width:500px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, lfr);
+    grid-template-rows: repeat(3, lfr);
+  }
+ .a {
+      grid-row:1;
+      grid-column: 1/5;
+    }
+
+  .b {
+    grid-column: 1/4;
+  }
+  
+  .c {
+
+  }
+  
 }
